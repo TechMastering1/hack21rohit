@@ -1,5 +1,5 @@
-import random
-def gameWin(comp, you):
+import ran
+def gameWin(you):
 	if comp == you:
 		return None
 	elif comp =='s':
@@ -32,12 +32,12 @@ if you != 's' or you !='p' or you !='ss':
 else:
 	pass
 a = gameWin(comp, you)
-print ("Computer chose ", comp)
-print ("You chose ", you)
+print ("Computer chose ")
+print ("You chose ")
 if a == None:
 	print ("Game is tie!")
 elif a:
 	print ("You won!")
 else:
-	print ("You Lose!")
+	print ("You")
 	
