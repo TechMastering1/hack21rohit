@@ -32,8 +32,12 @@ if you != 's' or you !='p' or you !='ss':
 else:
 	pass
 a = gameWin(comp, you)
-print ("Computer chose \n")
+
+print ("Comp chose \n")
 print ("You chose \n")
+
+
+
 if a == None:
 	print ("Game is tie")
 elif a:
