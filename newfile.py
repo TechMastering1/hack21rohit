@@ -1,4 +1,4 @@
-import ran
+import random
 def gameWin(you):
 	if comp == you:
 		return None
@@ -25,15 +25,15 @@ elif rn == 2:
 	comp='p'
 elif rn == 3:
 	comp='ss'
-you = input("Your turn: Stone (s), Paper (p) or Scissors (ss)\n")
+you = input("Your turn: Stone(s), Paper(p) or Scissors(ss)\n")
 if you != 's' or you !='p' or you !='ss':
 	print ("Invalid input")
 	you = input("Your turn: Stone (s), Paper (p) or Scissors (ss)\n")
 else:
 	pass
 a = gameWin(comp, you)
-print ("Computer chose ")
-print ("You chose ")
+print ("Computer chose \n")
+print ("You chose \n")
 if a == None:
 	print ("Game is tie!")
 elif a:
