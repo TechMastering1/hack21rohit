@@ -1,4 +1,4 @@
-import ran
+import random
 def gameWin(you):
 	if comp == you:
 		return None
