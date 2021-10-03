@@ -25,7 +25,7 @@ elif rn == 2:
 	comp='p'
 elif rn == 3:
 	comp='ss'
-you = input("Your turn: Stone (s), Paper (p) or Scissors (ss)\n")
+you = input("Your turn: Stone(s), Paper(p) or Scissors(ss)\n")
 if you != 's' or you !='p' or you !='ss':
 	print ("Invalid input")
 	you = input("Your turn: Stone (s), Paper (p) or Scissors (ss)\n")
