@@ -25,19 +25,23 @@ elif rn == 2:
 	comp='p'
 elif rn == 3:
 	comp='ss'
-you = input("Your turn: Stone (s), Paper (p) or Scissors (ss)\n")
+you = input("Your turn: Stone(s), Paper(p) or Scissors(ss)\n")
 if you != 's' or you !='p' or you !='ss':
 	print ("Invalid input")
 	you = input("Your turn: Stone (s), Paper (p) or Scissors (ss)\n")
 else:
 	pass
 a = gameWin(comp, you)
-print ("Computer chose /n")
-print ("You chose /n")
+
+print ("Comp chose \n")
+print ("You chose \n")
+
+
+
 if a == None:
-	print ("Game is tie!")
+	print ("Game is tie")
 elif a:
-	print ("You won!")
+	print ("You won")
 else:
 	print ("You")
 	
