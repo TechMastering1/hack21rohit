@@ -17,6 +17,7 @@ def gameWin(you):
 			return False
 		elif you =='s':
 			return True
+print("Welcome  to the game!")
 print ("Computer's turn: Stone (s), Paper (p) or Scissors (ss)")
 rn = random.randint(1,3)
 if rn ==1:
