@@ -1,47 +1,54 @@
 import random
-def gameWin(you):
-	if comp == you:
-		return None
-	elif comp =='s':
-		if you =='p':
-			return True
-		elif you =='ss':
-			return False
-	elif comp =='p':
-		if you =='s':
-			return False
-		elif you =='ss':
-			return True
-	elif comp =='ss':
-		if you =='p':
-			return False
-		elif you =='s':
-			return True
-print ("Computer's turn: Stone (s), Paper (p) or Scissors (ss)")
-rn = random.randint(1,3)
-if rn ==1:
-	comp='s'
-elif rn == 2:
-	comp='p'
-elif rn == 3:
-	comp='ss'
-you = input("Your turn: Stone(s), Paper(p) or Scissors(ss)\n")
-if you != 's' or you !='p' or you !='ss':
-	print ("Invalid input")
-	you = input("Your turn: Stone (s), Paper (p) or Scissors (ss)\n")
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+game_choices = [rock, paper, scissors]
+user_input = int(input("Make your choose: Rock, Paper or Scissors, type 0,1 or 2: \n"))
+invalid = True
+while invalid:
+    if user_input >= 3 or user_input < 0:
+        print("You have entered a invalid number. Try again!!")
+        user_input = int(input("Make your choose: Rock, Paper or Scissors, type 0,1 or 2: \n"))
+    else:
+        invalid = False
+computers_choice = game_choices[random.randint(0, 2)]
+user_choice = game_choices[user_input]
+
+print(f"You chose: {user_choice} The computer chose: {computers_choice}")
+
+if user_choice != computers_choice:
+    if user_choice == paper and computers_choice == rock:
+        print("You win!")
+    elif user_choice == rock and computers_choice == scissors:
+        print("You win!")
+    elif user_choice == scissors and computers_choice == paper:
+        print("You win!")
+    else:
+        print("You lose!")
 else:
-	pass
-a = gameWin(comp, you)
-
-print ("Comp chose \n")
-print ("You chose \n")
-
-
-
-if a == None:
-	print ("Game is tie")
-elif a:
-	print ("You won")
-else:
-	print ("You")
-	
+    print("Its a draw")
